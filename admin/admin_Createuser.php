@@ -7,13 +7,13 @@
 	if(isset($_POST['submit'])) {
 		$fname = trim($_POST['fname']);
 		$username = trim($_POST['username']);
-		$password = trim($_POST['password']);
+		// $password = trim($_POST['password']);
 		$email = trim($_POST['email']);
 		$userlvl = trim($_POST['userlvl']);
 		if (empty($userlvl)) {
 			$message = "please select a user level";
 		}else {
-			$result = AddNewUser($fname, $username, $password, $email, $userlvl);
+			$result = AddNewUser($fname, $username, $email, $userlvl);
 			$message = $result;
 		}
 	}
